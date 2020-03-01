@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Main */
+
+html {
+  height: 100%;
+}
+
+body {
+    background-color: hsl(240, 78%, 98%);
+    font: 700 15px 'Montserrat', sans-serif;
+    color: hsl(233, 13%, 49%);
+    height: 100%;
+}
+
+
+header {
+  text-align: center;
+  margin-top: 60px;
+}
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+
+.tile {
+    padding: 40px 30px;
+    background-color: #fff;
+    box-shadow: 0px 13px 53px -28px hsl(236, 72%, 79%);
+    border-radius: 10px;
+    text-align: center;
+    width: 70%;    
+    transition: width 1s;
+    margin: 20px 0;
+}
+
+
+.middle {
+  background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: #fff; 
+  padding: 70px 30px;
+  z-index: 1;
+}
+
+
+footer {
+  text-align: center;
+  position: relative;
+  margin: 20px auto;
+}
+
+
+
+
+
+/* Rules */
+
+h1 {
+  font-size: 30px;
+}
+
+hr {
+    border: .5px solid hsl(234, 14%, 74%);
+}
+
+h5 {
+   font-size: 3em;
+    color: hsl(232, 13%, 33%);
+    margin: 15px 0;
+}
+
+.middle h5 {
+  color: #fff;
+}
+
+h3 {
+    display: inline-block;
+    color: hsl(234, 14%, 74%);
+    margin: 40px 0;
+
+    font-size: 15px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+button {
+    border: none;   
+}
+
+.button1 {
+    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    color: white;
+    font: 700 15px 'Montserrat', sans-serif;
+    width: 100%;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.button2 {
+  background-color:white;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  padding: 15px 40px;
+  text-transform: uppercase;
+  color: hsl(237, 63%, 64%);
+  font: 700 15px 'Montserrat', sans-serif;
+  width: 100%;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+
+footer a {
+  text-decoration: none;
+}
+
+
+
+/* The switch - the box around the slider */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    bottom: 7px;
+    margin: 0 20px;
+  }
+  
+
+/* Hide default HTML checkbox */
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+/* The slider */
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+
+
+  /* Rounded sliders */
+
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+
+
+
+
+/* Media Query */
+
+/* Mobile */
+
+  @media only screen and (min-width: 320px) {
+    
+
+    .tile-container {
+      flex-direction: column;
+    }
+
+    .tile {
+      margin: 20px 10px;
+      width: 250px;
+    }
+
+    .middle {
+      padding: 40px 30px;
+    }
+
+}
+
+
+/* Tablet */
+
+@media only screen and (min-width: 1024px) {
+
+  body {
+    background-image: url(images/bg-top.svg), url(images/bg-bottom.svg);
+    background-position: top right, bottom left;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  .tile-container {
+    flex-direction: row;
+    margin-top: 30px;
+  }
+
+  .tile {
+    width: 260px;
+    margin: 0;
+  }
+
+  .middle {
+    padding: 70px 40px;
+    z-index: 1;
+  }
+
+}
+
+
+/* Desktop */
+
+@media only screen and (min-width: 1440px) {
+
+  .tile {
+    width: 300px;
+  }
+
+}
